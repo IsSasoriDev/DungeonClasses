@@ -1,0 +1,70 @@
+name: DungeonClasses
+version: 1.1.0
+api: 5.0.0
+main: DungeonClasses\Main
+author: SasoriDev
+description: Enhanced dungeon-themed class system with unique abilities and advanced features
+
+commands:
+  class:
+    description: Choose or view available classes
+    usage: /class [className]
+    permission: dungeonclasses.class
+  heal:
+    description: Mage healing spell (costs 10 mana)
+    usage: /heal
+    permission: dungeonclasses.heal
+  stealth:
+    description: Rogue stealth ability (10 seconds invisibility)
+    usage: /stealth
+    permission: dungeonclasses.stealth
+  bless:
+    description: Paladin blessing (heals nearby players)
+    usage: /bless
+    permission: dungeonclasses.bless
+  rain:
+    description: Archer arrow rain ability
+    usage: /rain
+    permission: dungeonclasses.rain
+  classinfo:
+    description: View detailed class information and status
+    usage: /classinfo
+    permission: dungeonclasses.info
+  resetclass:
+    description: Reset your current class to choose a new one
+    usage: /resetclass
+    permission: dungeonclasses.reset
+
+permissions:
+  dungeonclasses.*:
+    description: Gives access to all DungeonClasses features
+    default: op
+    children:
+      dungeonclasses.class: true
+      dungeonclasses.heal: true
+      dungeonclasses.stealth: true
+      dungeonclasses.bless: true
+      dungeonclasses.rain: true
+      dungeonclasses.info: true
+      dungeonclasses.reset: true
+  dungeonclasses.class:
+    description: Allows choosing and viewing classes
+    default: true
+  dungeonclasses.heal:
+    description: Allows using mage heal spell
+    default: true
+  dungeonclasses.stealth:
+    description: Allows using rogue stealth ability
+    default: true
+  dungeonclasses.bless:
+    description: Allows using paladin blessing
+    default: true
+  dungeonclasses.rain:
+    description: Allows using archer arrow rain
+    default: true
+  dungeonclasses.info:
+    description: Allows viewing class information and status
+    default: true
+  dungeonclasses.reset:
+    description: Allows resetting current class
+    default: true
